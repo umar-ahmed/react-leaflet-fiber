@@ -1,11 +1,12 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Default as Thing } from '../stories/Thing.stories';
 
-describe('Thing', () => {
+import { LeafletMap } from '../';
+
+describe('LeafletMap', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Thing />, div);
+    ReactDOM.render(<LeafletMap center={[0, 0]} zoom={12} />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });
